@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: #F5F5F5;
+}
+
+.feedBox {
+    background-color: white;
+    width: 71%;
+    margin: 5.9vw auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 7.1vw 5.2vw;
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    cursor: default;
+}
+
+.feedBox .tittle {
+    color: #00A851;
+    font-size: 2.34vw;
+    text-align: center;
+    margin: 3.5vw 0 1.5vw;
+}
+
+.feedBox .imgBox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 0 0 3.3vw;
+}
+
+.feedBox .imgBox .firmLogo {
+    width: 21.2vw;
+    margin: 0 8.6vw 0 0;
+}
+
+.feedBox .imgBox .userImg {
+    width: 15.6vw;
+    margin: 3vw 0 2.5vw;
+}
+
+.feedBox .userBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.46vw;
+    text-align: left;
+}
+
+.feedBox .userBox .name {
+    color: #00A851;
+}
+
+.feedBox .text {
+    font-size: 1.25vw;
+    color: #212121;
+}
+
+.feedBox .textNeg {
+    margin: 4.2vw 0 0;
+}
+
+.feedBox textarea {
+    width: 100%;
+    height: 16vw;
+    border: 1px solid #707070;
+    border-radius: 0.45vw;
+    font-size: 1.25vw;
+    font-weight: normal;
+    padding: 4.5vw 3.3vw;
+    letter-spacing: -1px;
+    color: black;
+    margin: 3.2vw 0 0;
+}
+
+.feedBox textarea:active,
+.feedBox textarea:focus {
+    border: 1pa solid #707070;
+}
+
+.feedBox textarea:placeholder-shown {
+    color: #6A6A6A;
+    font-size: 1.25vw;
+    font-weight: normal;
+    padding: 4.5vw 3.3vw;
+    letter-spacing: -1px;
+}
+
+.feedBox .tittleBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 1.8vw 0 3.3vw;
+}
+
+.feedBox .tittleBox .textTittle {
+    font-size: 1.25vw;
+    padding: 0 0.5vw 0 0;
+}
+
+.feedBox .tittleBox .logoRew {
+    width: 12.5vw;
+}
+
+.checkBox .check {
+    margin: 1.56vw 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    font-size: 1.25vw;
+}
+
+.custom-checkbox + label::before {
+    content: '';
+    display: inline-block;
+    width: 1.9vw;
+    height: 1.9vw;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 0.21vw solid #707070;
+    margin-right: 0.6vw;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.custom-checkbox:checked + label::before {
+    border-color: #00A851;
+    background-color: #00A851;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
+    border-color: #707070;
+}
+
+.custom-checkbox:not(:disabled):active + label::before {
+    background-color: #00A851;
+    border-color: #00A851;
+}
+
+.btnSub {
+    width: 11.46vw;
+    height: 4.1vw;
+    background-color: #00A851;
+    font-size: 1.3vw;
+    border: none;
+    border-radius: 0.45vw;
+    color: white;
+    font-weight: bold;
+    margin-top: 6vw;
+    cursor: pointer;
+}
+
+.btnSub:active,
+.btnSub:focus {
+    outline: none;
+}
+
+.great {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2.66vw 0;
+}
+
+.great .arr {
+    width: 4.6vw;
+}
+
+.great .h2 {
+    font-size: 1.95vw;
+    color: #212121;
+    margin: 0 0 0 1.3vw;
+}
+
+@media all and (max-width:768px) {
+    .feedBox .tittle {
+        font-size: 4vw;
+    }
+
+    .feedBox .imgBox {
+        padding: 1.5vw 0 4.2vw 0vw;
+    }
+
+    .feedBox .userBox {
+        font-size: 2.2vw;
+    }
+
+    .feedBox .text,
+    .feedBox textarea:placeholder-shown,
+    .feedBox textarea,
+    .custom-checkbox + label {
+        font-size: 2.25vw;
+        letter-spacing: 0;
+    }
+
+    .feedBox br {
+        display: none;
+    }
+
+    .feedBox textarea:placeholder-shown {
+        padding: 2.5vw 3.3vw;
+    }
+
+    .feedBox .tittleBox .logoRew {
+        width: 24.5vw;
+    }
+
+    .feedBox .tittleBox .textTittle {
+        font-size: 2vw;
+        padding: 0 1.5vw 0 0;
+    }
+
+    .custom-checkbox + label::before {
+        width: 2.9vw;
+        height: 2.9vw;
+    }
+
+    .btnSub {
+        width: 16.46vw;
+        height: 6.1vw;
+        font-size: 2.3vw;
+        margin-top: 4vw;
+    }
+
+    .great .arr {
+        width: 10.6vw;
+    }
+
+    .great .h2 {
+        font-size: 3.95vw;
+    }
+}
